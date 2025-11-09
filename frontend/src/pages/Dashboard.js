@@ -9,6 +9,7 @@ function Dashboard() {
     const addTask = (task) => {
         setTasks([...tasks, task]);
     };
+    
 
     const toggleTask = (index) => {
         const updated = [...tasks];
