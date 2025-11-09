@@ -10,5 +10,4 @@ public class TaskManagerApp {
 		System.out.println("Starting TaskManagerApp...");
 		SpringApplication.run(TaskManagerApp.class, args);
 	}
-
 }
