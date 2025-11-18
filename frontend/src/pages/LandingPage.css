@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 95vh;
   background-color: #f5f5f5;
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -11,7 +11,7 @@
 .landing-title {
   font-size: 3rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
   text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
   animation: pop-in 1.5s ease-in-out;
 }
@@ -37,5 +37,46 @@
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Button container animation */
+.landing-buttons {
+  display: flex;
+  gap: 25px;
+  margin-top: -100px;
+  animation: fadeSlideUp 2s ease-in-out;
+}
+
+/* Individual button styles */
+.btn.landing-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: rgb(0, 9, 128) 2px solid;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: #67ad0a;
+    color: #3905f7;
+    transition: transform 0.1s ease, box-shadow 0.3s ease, background-color 0.3s, color 0.3s;
+    animation: fadeSlideUp 1s ease-out;
+    }
+
+/* Hover effects for buttons */
+.btn.landing-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #3905f7;
+    color: #67ad0a;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
